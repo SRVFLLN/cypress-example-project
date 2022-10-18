@@ -1,0 +1,62 @@
+{
+    "alertsPage": {
+        "locator": "#alerttest",
+        "headerText": "Alert Box Examples"
+    },
+    "fakeAlertsPage": {
+        "locator": "#fakealerttest",
+        "headerText": "Fake Alert Box Examples"
+    },
+    "cookiesPage": {
+        "locator": "#adminlogin",
+        "headerText": "Cookie Controlled Admin"
+    },
+    "hoverPage": {
+        "locator": "#csspseudohover",
+        "headerText": "CSS Pseudo Class - hover"
+    },
+    "framePage": {
+        "locator": "#iframestest",
+        "headerText": "iFrames Example"
+    },
+    "firstButtonsPage": {
+        "locator": "#button01",
+        "headerText" : "Simple Dynamic Buttons",
+        "buttonsCount": 4
+    },
+    "secondButtonsPage": {
+        "locator": "#button02",
+        "headerText": "Disabled Dynamic Buttons",
+        "buttonsCount": 4
+    },
+    "downloadPage": {
+        "locator": "#download",
+        "headerText": "Download a File via JavaScript",
+        "fileContent": "This is a text file.",
+        "fileSizeKB": 142
+    },
+    "uploadPage": {
+        "locator": "#fileuploadtest",
+        "headerText": "Upload a File"
+    },
+    "eventPage": {
+        "locator": "#javascripteventbuttons",
+        "headerText": "JavaScript Events"
+    },
+    "userAgentPage": {
+        "locator": "#useragentredirect",
+        "headerText": "User Agent Based Redirection"
+    },
+    "html5FormPage": {
+        "locator": "#html5formtest",
+        "headerText": "HTML5 Form Elements Examples"
+    },
+    "clientServerFormPage": {
+        "locator": "#inputvalidation",
+        "headerText": "Input Validation Examples"
+    },
+    "xhttpMessagesPage": {
+        "locator": "#xhttpmessages",
+        "headerText": "XHTTP Messages"
+    }
+}

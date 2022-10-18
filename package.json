@@ -1,0 +1,24 @@
+{
+  "name": "cypress-functional-tests",
+  "version": "1.0.0",
+  "description": "Simple test framework implemented with cypress for demonstrate knowlege of some programming patterns and cypress API",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "npx cypress run --browser chrome --env allure=true",
+    "test:firefox": "npx cypress run --browser firefox --env allure=true",
+    "allure:generate": "npx allure generate allure-results -o allure-report --clean"
+  },
+  "keywords": [
+    "cypress",
+    "testing"
+  ],
+  "author": "SRVFLLN",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.33.0",
+    "allure-commandline": "^2.18.1",
+    "cypress": "^10.9.0",
+    "cypress-real-events": "^1.7.1",
+    "cypress-xpath": "^2.0.1"
+  }
+}
