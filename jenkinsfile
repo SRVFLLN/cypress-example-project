@@ -30,7 +30,6 @@ pipeline {
     post {
         always {
             bat 'npm run allure:generate'
-            bat 'ls'
             archiveArtifacts artifacts: './allure-report', allowEmptyArchive: true
 
             bat 'echo Cleaning up...'
