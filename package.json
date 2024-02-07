@@ -15,10 +15,10 @@
   "author": "SRVFLLN",
   "license": "ISC",
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.33.0",
-    "allure-commandline": "^2.18.1",
-    "cypress": "^10.9.0",
-    "cypress-real-events": "^1.7.1",
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "allure-commandline": "^2.27.0",
+    "cypress": "^10.11.0",
+    "cypress-real-events": "^1.11.0",
     "cypress-xpath": "^2.0.1"
   }
 }
