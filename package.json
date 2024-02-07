@@ -17,7 +17,7 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.1",
     "allure-commandline": "^2.27.0",
-    "cypress": "^10.11.0",
+    "cypress": "^13.6.4",
     "cypress-real-events": "^1.11.0",
     "cypress-xpath": "^2.0.1"
   }

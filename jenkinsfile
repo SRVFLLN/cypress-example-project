@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NodeJS' 
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/SRVFLLN/cypress-example-project.git'
+            }
+        }
+
+        stage('Install') {
+            steps {
+                bat 'npm install'
+                bat 'npm update'
+                bat 'npm install cypress@13.6.4'
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                bat 'npm run test:chrome'
+            }
+        }
+
+        stage('Generate a report') {
+            steps {
+                bat 'npm run allure:generate'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: './allure-report', allowEmptyArchive: true
+            bat 'echo Cleaning up...'
+            bat 'rmdir /S /Q cypress-example-project' 
+        }
+    }
+}
