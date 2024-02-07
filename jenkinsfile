@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS' 
+        nodejs 'NodeJS'
     }
 
     stages {
@@ -25,19 +25,16 @@ pipeline {
                 bat 'npm run test:chrome'
             }
         }
-
-        stage('Generate a report') {
-            steps {
-                bat 'npm run allure:generate'
-            }
-        }
     }
 
     post {
         always {
+            bat 'npm run allure:generate'
             archiveArtifacts artifacts: './allure-report', allowEmptyArchive: true
+
             bat 'echo Cleaning up...'
-            bat 'rmdir /S /Q cypress-example-project' 
+            bat 'cd ../'
+            bat 'rmdir /S /Q cypress-example-project'
         }
     }
 }
