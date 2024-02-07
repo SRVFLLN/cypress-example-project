@@ -30,11 +30,12 @@ pipeline {
     post {
         always {
             bat 'npm run allure:generate'
+            bat 'ls'
             archiveArtifacts artifacts: './allure-report', allowEmptyArchive: true
 
             bat 'echo Cleaning up...'
             bat 'cd ../'
-            bat 'rmdir /S /Q cypress-example-project'
+            bat 'rmdir /S /Q ./**'
         }
     }
 }
