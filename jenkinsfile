@@ -33,8 +33,7 @@ pipeline {
             archiveArtifacts artifacts: './allure-report', allowEmptyArchive: true
 
             bat 'echo Cleaning up...'
-            bat 'cd ../'
-            bat 'rmdir /S /Q ./'
+            bat 'rmdir /S /Q ./*'
         }
     }
 }
